@@ -92,3 +92,24 @@ const itemWidth = judgeItems[0].clientWidth + 30; // Adjust for margins
 // Adjust animation duration based on total width
 const duration = (totalWidth / itemWidth) * 4; // 15 seconds for all items
 container.style.animationDuration = `${duration}s`;
+
+
+// sponsor company logo 
+function changeTab(tab) {
+    const tabs = ['diamond', 'gold', 'silver'];
+    tabs.forEach(t => {
+        const button = document.getElementById(t + '-tab');
+        const content = document.getElementById(t);
+
+        if (t === tab) {
+            button.classList.remove('tab-inactive');
+            button.classList.add('tab-active');
+            content.classList.remove('hidden');
+            content.classList.add('active');
+        } else {
+            button.classList.remove('tab-active');
+            button.classList.add('tab-inactive');
+            content.classList.add('hidden');
+        }
+    });
+}

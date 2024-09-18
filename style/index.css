@@ -46,6 +46,17 @@
     margin: 0 15px;
 }
 
+.bold-hr {
+    border: none; /* Remove default border */
+    height: 3px; /* Thickness of the line */
+    background-color: #CE1446; /* Change to your desired color */
+}
+.tab-active {
+    color: #CE1446;
+}
+.tab-inactive {
+    color: #ADA3BE;
+}
 
 
 
