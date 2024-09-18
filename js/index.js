@@ -50,4 +50,45 @@ setInterval(updateCountdown, 1000);
 updateCountdown(); // Initial call to set the timer immediately
 
 
+// Function to simulate counting up to a target number
+function countUp(elementId, targetNumber) {
+    let currentNumber = 0;
+    const interval = setInterval(() => {
+        if (currentNumber < targetNumber) {
+            currentNumber++;
+            document.getElementById(elementId).innerText = currentNumber;
+        } else {
+            clearInterval(interval);
+        }
+    }, 10); // Adjust the interval time for speed
+}
 
+// Initialize counters with target values
+window.onload = () => {
+    countUp('participants', 500);
+    countUp('subEvents', 3);
+    countUp('seminars', 5);
+    countUp('universities', 53);
+    countUp('clubs', 8);
+};
+
+
+// Infinity judges loop 
+const container = document.getElementById('scroll-container');
+const judgeItems = container.children;
+const itemCount = judgeItems.length;
+
+// Clone the items to create an infinite scrolling effect
+for (let i = 0; i < itemCount; i++) {
+    const clone = judgeItems[i].cloneNode(true);
+    container.appendChild(clone);
+}
+
+// Adjust the scroll animation to accommodate all items
+const totalWidth = container.scrollWidth / 2; // Since we doubled the items
+container.style.width = `${totalWidth}px`;
+const itemWidth = judgeItems[0].clientWidth + 30; // Adjust for margins
+
+// Adjust animation duration based on total width
+const duration = (totalWidth / itemWidth) * 4; // 15 seconds for all items
+container.style.animationDuration = `${duration}s`;

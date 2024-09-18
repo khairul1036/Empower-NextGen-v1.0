@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Judges Carousel</title>
+    <style>
+        .scroll-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%; /* Full width */
+            max-width: 800px; /* Adjust as needed */
+        }
+        .scroll-container {
+            display: flex;
+            animation: scroll 15s linear infinite; /* Adjust speed here */
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .judge-item {
+            min-width: 200px; /* Adjust width as necessary */
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="scroll-wrapper">
+        <div class="scroll-container" id="scroll-container">
+            <div class="judge-item text-center">
+                <img src="judge1.jpg" alt="Judge 1" class="rounded-full w-32 h-32 mx-auto mb-2">
+                <h3 class="text-lg font-semibold">asif</h3>
+                <p class="text-gray-500">Designation 1</p>
+            </div>
+            <div class="judge-item text-center">
+                <img src="judge2.jpg" alt="Judge 2" class="rounded-full w-32 h-32 mx-auto mb-2">
+                <h3 class="text-lg font-semibold">rifat</h3>
+                <p class="text-gray-500">Designation 2</p>
+            </div>
+            <div class="judge-item text-center">
+                <img src="judge3.jpg" alt="Judge 3" class="rounded-full w-32 h-32 mx-auto mb-2">
+                <h3 class="text-lg font-semibold">adnan</h3>
+                <p class="text-gray-500">Designation 3</p>
+            </div>
+            <div class="judge-item text-center">
+                <img src="judge4.jpg" alt="Judge 4" class="rounded-full w-32 h-32 mx-auto mb-2">
+                <h3 class="text-lg font-semibold">motu</h3>
+                <p class="text-gray-500">Designation 4</p>
+            </div>
+            <!-- Add more judges as needed -->
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('scroll-container');
+        const judgeItems = container.children;
+        const itemCount = judgeItems.length;
+
+        // Clone the items to create an infinite scrolling effect
+        for (let i = 0; i < itemCount; i++) {
+            const clone = judgeItems[i].cloneNode(true);
+            container.appendChild(clone);
+        }
+
+        // Adjust the scroll animation to accommodate all items
+        const totalWidth = container.scrollWidth / 2; // Since we doubled the items
+        container.style.width = `${totalWidth}px`;
+        const itemWidth = judgeItems[0].clientWidth + 30; // Adjust for margins
+
+        // Adjust animation duration based on total width
+        const duration = (totalWidth / itemWidth) * 2; // 15 seconds for all items
+        container.style.animationDuration = `${duration}s`;
+    </script>
+
+</body>
+</html>

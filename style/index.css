@@ -17,7 +17,34 @@
     color: #CE1446; /* Active color */
     font-weight: bold;
 }
-
+.counter {
+    animation: count 2s ease-in-out forwards;
+}
+@keyframes count {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.counterBgColor{
+    background-color: rgba(25, 31, 60, 0.9);
+}
+.scroll-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Adjust as needed */
+}
+.scroll-container {
+    display: flex;
+    animation: scroll 15s linear infinite; 
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.judge-item {
+    min-width: 200px; /* Adjust width as necessary */
+    margin: 0 15px;
+}
 
 
 
