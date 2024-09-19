@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empower NextGen Ltd.</title>
+
+    <!-- raw css file link -->
+    <link rel="stylesheet" href="./style/registration.css" />
+    <!-- fontawesome and google font CDN link -->
+    <script
+      src="https://kit.fontawesome.com/70d1331392.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind and DaisyUI CDN link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+        .hidden { display: none; }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              DarkBlueBlack: "#010313",
+              RaspberryRed: "#CE1446",
+              RegalPurple: "#370C65",
+              DarkRaspberry: "72216A",
+              IndigoBlack: "#0A123C",
+              MidnightPurple: "#201A2F",
+              LavenderGray: "#ADA3BE",
+              Green: "#20A074",
+            },
+            fontFamily: {
+              barlow: ["Barlow", "sans-serif"], //defining the font family
+            },
+          },
+        },
+      };
+    </script>
+    <!-- <script>
+        // Function to set current date and time before form submission
+        function setDateTime() {
+            const now = new Date();
+            const offset = 6 * 60; // Bangladesh time is UTC+6 hours
+            const localTime = new Date(now.getTime() + offset * 60 * 1000);
+    
+            // Format date and time as a string (ISO format is common)
+            const datetime = localTime.toISOString(); // ISO string in UTC
+            document.querySelector('input[name="datetime"]').value = datetime;
+        }
+    </script> -->
+  </head>
+  <body class="font-barlow bg-DarkBlueBlack text-white">
+    <header class="max-w-screen-xl mx-auto py-5">
+      <!-- Navbar design -->
+      <nav
+        class="fixed top-0 left-0 lg:px-24 py-4 w-full bg-[#0C0E1D] text-white flex justify-between items-center z-50"
+      >
+        <div class="flex items-center gap-2 lg:gap-10 px-4 py-2">
+          <h1 class="text-3xl font-extrabold">
+            <!-- <a href="">Empower <span class="text-RaspberryRed">NextGen</span></a
+            > -->
+            <a href="index.html"
+              ><img class="w-32" src="assets/image/logo1.png" alt=""
+            /></a>
+          </h1>
+        </div>
+        <div class="flex items-center gap-3 text-center px-5 lg:px-0 md:px-0">
+          <!-- Main navigation for larger screens -->
+          <ul class="hidden lg:flex items-center gap-3 text-center">
+            <li class="px-4 py-2">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="hover:text-RaspberryRed px-4 py-2">
+              <a href="sub-events.html">Sub-Events</a>
+            </li>
+            <li class="hover:text-RaspberryRed px-4 py-2">
+              <a href="join-team.html">Join-Team</a>
+            </li>
+            <li class="hover:text-RaspberryRed px-4 py-2">
+              <a href="about.html">About</a>
+            </li>
+            <button
+              class="bg-RaspberryRed text-white rounded-lg px-5 py-2 hover:bg-transparent hover:border hover:border-RaspberryRed hover:text-RaspberryRed hover:font-semibold"
+            >
+              Register Now
+            </button>
+          </ul>
+          <!-- Hamburger icon for mobile screens -->
+          <div class="lg:hidden text-2xl cursor-pointer" id="hamburgerMenu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Popup Modal for Navigation (hidden by default) -->
+      <div
+        id="navModal"
+        class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-50 transition-opacity duration-300 opacity-0"
+      >
+        <div
+          class="bg-black w-4/5 max-w-lg rounded-lg shadow-lg p-5 transform scale-0 transition-transform duration-300"
+        >
+          <ul class="flex flex-col items-center g px-5alg:px-20 py-10">
+            <li class="text-lg my-2">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="hover:text-RaspberryRed text-lg my-2">
+              <a href="sub-events.html">Sub-Events</a>
+            </li>
+            <li class="hover:text-RaspberryRed text-lg my-2">
+              <a href="join-team.html">Join-Team</a>
+            </li>
+            <li class="hover:text-RaspberryRed text-lg mt-2 mb-5">
+              <a href="about.html">About</a>
+            </li>
+            <button
+              class="bg-RaspberryRed text-white rounded-lg px-6 py-3 hover:bg-transparent hover:border hover:border-RaspberryRed hover:text-RaspberryRed hover:font-semibold"
+            >
+              Register Now
+            </button>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="my-20 px-5">
+        
+        <div class="max-w-screen-md mx-auto p-6 rounded-lg shadow-md mb-5">
+            <h2 class="text-2xl font-bold mb-5 text-white text-center">Registration form National UI/UX Compionship, 2025</h2>
+            <form name="submit-to-google-sheet" id="teamForm" onsubmit="setDateTime()">
+                <input name="datetime" type="hidden">
+                <input name="teamID" type="hidden"> <!-- Hidden input for teamID -->
+        
+                <div class="max-w-screen-md mx-auto bg-[#161827] p-6 rounded-lg shadow-md mb-5">
+                <h2 class="text-2xl font-bold mb-4 text-white">Leader Information</h2>
+            <!-- leader info -->
+             <div class="grid lg:gap-5 lg:grid-cols-2 md:grid-cols-2">
+                <div class="mb-4 lg:mb-0 md:mb-0">
+                    <label for="leaderName" class="block text-gray-200">Leader Name:</label>
+                    <input type="text" id="leaderName" name="leaderName" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" placeholder="MD Kamal" required>
+                </div>
+        
+                <div class="mb-4 lg:mb-0 md:mb-0">
+                    <label for="email" class="block text-gray-200">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" placeholder="kamal@gmail.com" required>
+                </div>
+        
+                <div class="mb-4 lg:mb-0 md:mb-0">
+                    <label for="phone" class="block text-gray-200">Phone:</label>
+                    <input type="number" id="phone" name="phone" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" placeholder="017xxxxxxxx" required>
+                </div>
+
+                <div class="mb-4 lg:mb-0 md:mb-0">
+                    <label for="leaderInstitute" class="block text-gray-200">Institute Name:</label>
+                    <input type="text" id="leaderInstitute" name="leaderInstitute" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" placeholder="Daffodil International University" required>
+                </div>
+        
+                <div class="mb-4 lg:mb-0 md:mb-0">
+                    <label for="address" class="block text-gray-200">Address:</label>
+                    <input type="text" id="address" name="address" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" placeholder="DSC, Ashulia, Savar, Dhaka" required>
+                </div>
+        
+                <div class="mb-4 lg:mb-0 md:mb-0">
+                    <label for="tshirtSize" class="block text-gray-200">T-Shirt Size:</label>
+                    <select id="tshirtSize" name="tshirtSize" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" required>
+                        <option value="" disabled selected>Select T-Shirt Size</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                        <option value="XXXL">XXXL</option>
+                    </select>
+                </div>
+             </div>
+        </div>
+            
+                
+        
+        <!-- members info  -->
+        <div class="max-w-screen-md mx-auto bg-[#161827] p-6 rounded-lg shadow-md mb-5">
+            <h2 class="text-2xl font-bold mb-4 text-white">Team Information</h2>
+            <div class="mb-4">
+                <span class="block text-gray-200">Number of Team Members:</span>
+                <div class="flex space-x-4">
+                    <label><input type="radio" name="teamMembers" value="0" class="team-member-radio" checked> 1</label>
+                    <label><input type="radio" name="teamMembers" value="1" class="team-member-radio"> 2</label>
+                    <label><input type="radio" name="teamMembers" value="2" class="team-member-radio"> 3</label>
+                    <label><input type="radio" name="teamMembers" value="3" class="team-member-radio"> 4</label>
+                </div>
+            </div>
+    
+            <div id="teamMembersContainer">
+                <!-- Team member fields will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="max-w-screen-md mx-auto bg-[#161827] p-6 rounded-lg shadow-md mb-5">
+            <h2 class="text-2xl font-bold mb-4 text-white">Check the question</h2>
+            <!-- some question  -->
+            <div class="mb-4">
+                <span class="block text-gray-200">Do you carry your own laptop?</span>
+                <div class="flex space-x-4">
+                    <label><input type="radio" name="ownLaptop" value="yes" required> Yes</label>
+                    <label><input type="radio" name="ownLaptop" value="no"> No</label>
+                </div>
+            </div>
+        </div>        
+
+        <!-- payment details  -->
+        <div class="max-w-screen-md mx-auto bg-[#161827] p-6 rounded-lg shadow-md mb-5">
+            <h2 class="text-2xl font-bold mb-4 text-white">Payment Input</h2>
+            <div class="mb-4">
+                <span class="block text-gray-200">Payment Method:</span>
+                <div class="flex space-x-4">
+                    <label><input type="radio" name="paymentMethod" value="Bkash" required> Bkash</label>
+                    <label><input type="radio" name="paymentMethod" value="Nagad"> Nagad</label>
+                    <label><input type="radio" name="paymentMethod" value="Rocket"> Rocket</label>
+                </div>
+            </div>
+    
+            <div class="grid lg:gap-5 lg:grid-cols-2 md:grid-cols-2">
+                <div class="mb-4">
+                    <label for="paymentNumber" class="block text-gray-200">Payment Number:</label>
+                    <input type="number" id="paymentNumber" name="paymentNumber" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" placeholder="017xxxxxxxx" required>
+                </div>
+        
+                <div class="mb-4">
+                    <label for="transactionId" class="block text-gray-200">Transaction ID:</label>
+                    <input type="text" id="transactionId" name="transactionId" class="w-full p-2 border border-gray-500 rounded bg-DarkBlueBlack focus:outline-none focus:border-RaspberryRed focus:ring-RaspberryRed focus:ring-1" placeholder="BMS1HS54S" required>
+                </div>
+            </div>
+    
+            <!-- check terms and conditions  -->
+            <div class="mb-4">
+                <input type="checkbox" class="cursor-pointer" required>
+                <span>I agree to the </span><a href=""><span class="text-Green">terms and conditions</span></a>
+            </div>
+
+            <div class="flex justify-center lg:justify-end items-center">
+                <button type="submit" class="bg-RaspberryRed text-white px-10 py-2 rounded">Submit</button>
+            </div>
+        </form>
+        </div>
+        
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="bg-gradient-to-r from-[#290E2D] to-[#0A123C]">
+      <!--brand logo  -->
+      <div class="max-w-screen-xl mx-auto py-10 flex justify-center">
+        <a href="index.html"
+          ><img class="w-36" src="assets/image/logo1.png" alt="logo"
+        /></a>
+      </div>
+      <!-- Quick Link container  -->
+      <div class="max-w-screen-xl mx-auto md:flex justify-between">
+        <div
+          class="md:w-[25%] flex flex-col items-center lg:items-start md:mb-0 mb-10"
+        >
+          <div class="mb-5">
+            <p
+              class="text-2xl font-semibold text-center lg:text-start text-slate-200"
+            >
+              Quick Link
+            </p>
+          </div>
+          <div>
+            <ul class="flex flex-col leading-7 text-center lg:text-start">
+              <li class="mb-1">
+                <a class="font- hover:underline text-slate-200" href=""
+                  >Our Team</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="font- hover:underline text-slate-200" href=""
+                  >Join Us</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="font- hover:underline text-slate-200" href=""
+                  >Advisor Panel</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="font- hover:underline text-slate-200" href=""
+                  >Lottery Winner</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="font- hover:underline text-slate-200" href=""
+                  >Policy</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="font- hover:underline text-slate-200" href=""
+                  >Privacy</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="font- hover:underline text-slate-200" href=""
+                  >FAQ's</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Subscribe container  -->
+        <div class="md:w-[50%] flex flex-col justify-center items-center">
+          <div class="flex flex-col items-center">
+            <h2 class="text-xl lg:text-3xl font-semibold text-slate-200 mb-2">
+              Subscribe Our Newsletter
+            </h2>
+            <h3 class="text-[#CE1446] text-md lg:text-xl font-bold mb-2">
+              Don't miss our feature update
+            </h3>
+            <div class="flex mt-3">
+              <input
+                class="px-3 w-40 lg:w-72 py-2 rounded-s-md"
+                placeholder="Enter Your Email"
+                type="email"
+                name=""
+                id=""
+              />
+              <button
+                class="font-semibold text-white py-2 px-5 rounded-e-md bg-gradient-to-r from-[#7111EB] to-[#CE1446]"
+              >
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact container   -->
+        <div class="md:w-[25%] flex flex-col items-center lg:items-end">
+          <div class="mt-10 lg:mt-0 order-2 lg:order-3">
+            <h2 class="text-2xl mb-5 text-slate-200 font-semibold">Contact</h2>
+            <div class="text-slate-200">
+              <div class="flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-phone text-2xl"></i>
+                <div class="">
+                  <p><a href="tel:+8801788956132">+880 1788956132</a></p>
+                  <p><a href="tel:+8801788956132">+880 1788956132</a></p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-envelope text-2xl"></i>
+                <div class="">
+                  <p><a href="mailto:info@example.com">info@example.com</a></p>
+                  <p>
+                    <a href="mailto:support@example.com">support@example.com</a>
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-location-dot text-2xl"></i>
+                <div class="">
+                  <p>Dhaka,Bangladesh</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="max-w-screen-xl mx-auto mt-10" />
+      <div
+        class="max-w-screen-xl mx-auto flex justify-between md:px-5 md:py-10 py-5"
+      >
+        <div class="w-1/2 text-white">Copyright 2024, Empower NextGen</div>
+        <div class="w-1/2 flex justify-end">
+          <div class="flex gap-3 lg:gap-5 mt-2 lg:mt-0 text-slate-200">
+            <i class="fa-brands fa-facebook-f text-xl"></i>
+            <i class="fa-brands fa-instagram text-xl"></i>
+            <i class="fa-brands fa-linkedin-in text-xl"></i>
+            <i class="fa-brands fa-twitter text-xl"></i>
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="js/index.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const teamMembersContainer = document.getElementById('teamMembersContainer');
+            const radioButtons = document.querySelectorAll('input[name="teamMembers"]');
+
+            function updateTeamMemberFields() {
+                const selectedValue = document.querySelector('input[name="teamMembers"]:checked').value;
+                teamMembersContainer.innerHTML = ''; // Clear existing fields
+
+                for (let i = 0; i < parseInt(selectedValue); i++) {
+                    const fieldset = document.createElement('fieldset');
+                    fieldset.className = 'mb-4 p-4 border border-gray-300 rounded';
+                    fieldset.innerHTML = `
+                        <legend class="text-gray-700">Team Member ${i + 1}:</legend>
+                        <label for="memberName${i}" class="block text-gray-700">Name:</label>
+                        <input type="text" id="memberName${i}" name="memberName${i}" class="w-full p-2 border border-gray-300 rounded" required>
+                        <label for="memberEmail${i}" class="block text-gray-700 mt-2">Email:</label>
+                        <input type="email" id="memberEmail${i}" name="memberEmail${i}" class="w-full p-2 border border-gray-300 rounded" required>
+                    `;
+                    teamMembersContainer.appendChild(fieldset);
+                }
+            }
+
+            radioButtons.forEach(radio => {
+                radio.addEventListener('change', updateTeamMemberFields);
+            });
+
+            // Initial call to set up the form
+            updateTeamMemberFields();
+        });
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script> <!-- SweetAlert2 JS -->
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxx1eLy6_5H4Us8wc6_W5TpR3dNIi7nZ0tnJIVh5-FKGSdjQllJBRjopQlRPg8X4DWerA/exec'; // Replace with your Google Apps Script URL
+        const form = document.forms['submit-to-google-sheet'];
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // Set the teamID (you might need to do this after getting it from the server)
+            document.querySelector('input[name="teamID"]').value = ''; // Initially empty, will be set by the server
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+              .then(response => response.json())
+              .then(data => {
+                console.log('Success!', data);
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Your form has been submitted.',
+                });
+              })
+              .catch(error => {
+                console.error('Error!', error.message);
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Something went wrong!',
+                });
+              });
+        });
+    </script> -->
+
+  </body>
+</html>
