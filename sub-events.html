@@ -50,18 +50,20 @@
   </head>
   <body class="font-barlow bg-DarkBlueBlack text-white">
     <header class="max-w-screen-xl mx-auto py-5">
-      <!-- navbar design -->
-      <nav class="flex justify-between items-center">
-        <div class="text-white flex items-center gap-2 lg:gap-10">
+      <!-- Navbar design -->
+      <nav
+        class="fixed top-0 left-0 lg:px-24 py-4 w-full bg-[#0C0E1D] text-white flex justify-between items-center z-50"
+      >
+        <div class="flex items-center gap-2 lg:gap-10 px-4 py-2">
           <h1 class="text-3xl font-extrabold">
-            <a href=""
-              >Empower <span class="text-RaspberryRed">NextGen</span></a
-            >
+            <!-- <a href="">Empower <span class="text-RaspberryRed">NextGen</span></a
+            > -->
+            <a href="index.html"
+              ><img class="w-32" src="assets/image/logo1.png" alt=""
+            /></a>
           </h1>
         </div>
-        <div
-          class="text-white flex items-center gap-3 text-center px-5 lg:px-0 md:px-0"
-        >
+        <div class="flex items-center gap-3 text-center px-5 lg:px-0 md:px-0">
           <!-- Main navigation for larger screens -->
           <ul class="hidden lg:flex items-center gap-3 text-center">
             <li class="hover:text-RaspberryRed px-4 py-2">
@@ -71,16 +73,18 @@
               <a href="sub-events.html">Sub-Events</a>
             </li>
             <li class="hover:text-RaspberryRed px-4 py-2">
-              <a href="join-team.html">Join-Team</a>
+              <a href="#">Join-Team</a>
             </li>
             <li class="hover:text-RaspberryRed px-4 py-2">
               <a href="about.html">About</a>
             </li>
-            <button
-              class="bg-RaspberryRed text-white rounded-lg px-5 py-2 hover:bg-transparent hover:border hover:border-RaspberryRed hover:text-RaspberryRed hover:font-semibold"
+            <a href="registration.html"
+              ><button
+                class="bg-RaspberryRed text-white rounded-lg px-5 py-2 hover:bg-transparent hover:border hover:border-RaspberryRed hover:text-RaspberryRed hover:font-semibold"
+              >
+                Register Now
+              </button></a
             >
-              Register Now
-            </button>
           </ul>
           <!-- Hamburger icon for mobile screens -->
           <div class="lg:hidden text-2xl cursor-pointer" id="hamburgerMenu">
@@ -97,304 +101,318 @@
         <div
           class="bg-black w-4/5 max-w-lg rounded-lg shadow-lg p-5 transform scale-0 transition-transform duration-300"
         >
-          <ul class="flex flex-col items-center gap-4">
-            <li class="hover:text-RaspberryRed text-lg">
+          <ul class="flex flex-col items-center g px-5alg:px-20 py-10">
+            <li class="hover:text-RaspberryRed text-lg my-2">
               <a href="index.html">Home</a>
             </li>
-            <li class="font-medium text-RaspberryRed text-lg">
+            <li class="font-medium text-RaspberryRed text-lg my-2">
               <a href="sub-events.html">Sub-Events</a>
             </li>
-            <li class="hover:text-RaspberryRed text-lg">
-              <a href="join-team.html">Join-Team</a>
+            <li class="hover:text-RaspberryRed text-lg my-2">
+              <a href="#">Join-Team</a>
             </li>
-            <li class="hover:text-RaspberryRed text-lg">
+            <li class="hover:text-RaspberryRed text-lg mt-2 mb-5">
               <a href="about.html">About</a>
             </li>
-            <button
-              class="bg-RaspberryRed text-white rounded-lg px-6 py-3 hover:bg-transparent hover:border hover:border-RaspberryRed hover:text-RaspberryRed hover:font-semibold"
+            <a href="registration.html"
+              ><button
+                class="bg-RaspberryRed text-white rounded-lg px-6 py-3 hover:bg-transparent hover:border hover:border-RaspberryRed hover:text-RaspberryRed hover:font-semibold"
+              >
+                Register Now
+              </button></a
             >
-              Register Now
-            </button>
           </ul>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="max-w-screen-xl mx-auto">
-        <h1 class="text-3xl font-bold text-center my-10">Sub-events</h1>
-        <div class="py-10 px-4 lg:px-0">
-          <div class="bg-[#12091E] shadow-md rounded-lg">
-            <!-- Tabs -->
-            <div
-              class="flex flex-wrap border-b border-gray-800 justify-center py-6 lg:py-10 px-2 lg:text-xl gap-5 lg:gap-10"
-            >
-              <button id="about-tab" class="tab-button">Logo Design</button>
-              <button id="prizes-tab" class="tab-button">Banner Design</button>
-              <button id="venue-tab" class="tab-button">Quiz</button>
-              <button id="schedule-tab" class="tab-button">Schedule</button>
-            </div>
+      <section class="mt-28">
+        <div class="max-w-screen-xl mx-auto">
+          <h1 class="text-3xl font-bold text-center">Sub-events</h1>
+          <div class="py-10 px-4 lg:px-0">
+            <div class="bg-[#12091E] shadow-md rounded-lg">
+              <!-- Tabs -->
+              <div
+                class="flex flex-wrap border-b border-gray-800 justify-center py-6 lg:py-10 px-2 lg:text-xl gap-5 lg:gap-10"
+              >
+                <button id="about-tab" class="tab-button">Logo Design</button>
+                <button id="prizes-tab" class="tab-button">
+                  Banner Design
+                </button>
+                <button id="venue-tab" class="tab-button">Quiz</button>
+                <button id="schedule-tab" class="tab-button">Schedule</button>
+              </div>
 
-            <!-- Tab Content -->
-             <!-- logo contest  -->
-            <div id="about" class="tab-content px-5 lg:px-20 py-10 active">
-              <h1 class="text-3xl font-bold mb-6">Logo Design Contest</h1>
+              <!-- Tab Content -->
+              <!-- logo contest  -->
+              <div id="about" class="tab-content px-5 lg:px-20 py-10 active">
+                <h1 class="text-3xl font-bold mb-6">Logo Design Contest</h1>
 
-              <!-- Prize Cards -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <!-- 1st Place Card -->
-                <div class="bg-[#CE1446] text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">1st Place</h3>
-                  <p class="text-2xl font-bold">$500</p>
+                <!-- Prize Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <!-- 1st Place Card -->
+                  <div class="bg-[#CE1446] text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">1st Place</h3>
+                    <p class="text-2xl font-bold">$500</p>
+                  </div>
+
+                  <!-- 2nd Place Card -->
+                  <div class="bg-[#FFC107] text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">2nd Place</h3>
+                    <p class="text-2xl font-bold">$300</p>
+                  </div>
+
+                  <!-- 3rd Place Card -->
+                  <div class="bg-gray-500 text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">3rd Place</h3>
+                    <p class="text-2xl font-bold">$100</p>
+                  </div>
                 </div>
 
-                <!-- 2nd Place Card -->
-                <div class="bg-[#FFC107] text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">2nd Place</h3>
-                  <p class="text-2xl font-bold">$300</p>
+                <!-- About Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
+                  <p class="text-gray-700">
+                    Join us in our annual Logo Design Contest, where creativity
+                    meets innovation. Showcase your design skills and stand a
+                    chance to win exciting prizes while gaining recognition in
+                    the design community.
+                  </p>
                 </div>
 
-                <!-- 3rd Place Card -->
-                <div class="bg-gray-500 text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">3rd Place</h3>
-                  <p class="text-2xl font-bold">$100</p>
-                </div>
-              </div>
-
-              <!-- About Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
-                <p class="text-gray-700">
-                  Join us in our annual Logo Design Contest, where creativity
-                  meets innovation. Showcase your design skills and stand a
-                  chance to win exciting prizes while gaining recognition in the
-                  design community.
-                </p>
-              </div>
-
-              <!-- Rules & Conditions Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Rules & Conditions</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>All entries must be original designs.</li>
-                  <li>Submissions should be in .png or .jpeg format.</li>
-                  <li>Each participant can submit up to 3 designs.</li>
-                  <li>
-                    Entries must be submitted by the deadline: November 30,
-                    2024.
-                  </li>
-                  <li>Judges' decisions are final.</li>
-                </ul>
-              </div>
-
-              <!-- Mark Distribution Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>Creativity: 40%</li>
-                  <li>Relevance to Theme: 30%</li>
-                  <li>Technical Execution: 30%</li>
-                </ul>
-              </div>
-
-              <!-- Register Now Button -->
-              <div class="text-center">
-                <a
-                  href="#register"
-                  class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
-                  >Register Now</a
-                >
-              </div>
-            </div>
-
-            <!-- schedule  -->
-            <div id="schedule" class="tab-content px-5 lg:px-20 py-10">
-              <h1 class="text-3xl font-bold mb-6">Contest</h1>
-              <!-- About Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
-                <p class="text-gray-700">
-                  Join us in our annual Logo Design Contest, where creativity
-                  meets innovation. Showcase your design skills and stand a
-                  chance to win exciting prizes while gaining recognition in the
-                  design community.
-                </p>
-              </div>
-
-              <!-- Rules & Conditions Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Rules & Conditions</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>All entries must be original designs.</li>
-                  <li>Submissions should be in .png or .jpeg format.</li>
-                  <li>Each participant can submit up to 3 designs.</li>
-                  <li>
-                    Entries must be submitted by the deadline: November 30,
-                    2024.
-                  </li>
-                  <li>Judges' decisions are final.</li>
-                </ul>
-              </div>
-
-              <!-- Mark Distribution Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>Creativity: 40%</li>
-                  <li>Relevance to Theme: 30%</li>
-                  <li>Technical Execution: 30%</li>
-                </ul>
-              </div>
-
-              <!-- Register Now Button -->
-              <div class="text-center">
-                <a
-                  href="#register"
-                  class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
-                  >Register Now</a
-                >
-              </div>
-            </div>
-
-            <!-- Quiz contest  -->
-            <div id="venue" class="tab-content px-5 lg:px-20 py-10">
-              <h1 class="text-3xl font-bold mb-6">Quiz Contest</h1>
-
-              <!-- Prize Cards -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <!-- 1st Place Card -->
-                <div class="bg-[#CE1446] text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">1st Place</h3>
-                  <p class="text-2xl font-bold">$500</p>
+                <!-- Rules & Conditions Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">
+                    Rules & Conditions
+                  </h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>All entries must be original designs.</li>
+                    <li>Submissions should be in .png or .jpeg format.</li>
+                    <li>Each participant can submit up to 3 designs.</li>
+                    <li>
+                      Entries must be submitted by the deadline: November 30,
+                      2024.
+                    </li>
+                    <li>Judges' decisions are final.</li>
+                  </ul>
                 </div>
 
-                <!-- 2nd Place Card -->
-                <div class="bg-[#FFC107] text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">2nd Place</h3>
-                  <p class="text-2xl font-bold">$300</p>
+                <!-- Mark Distribution Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>Creativity: 40%</li>
+                    <li>Relevance to Theme: 30%</li>
+                    <li>Technical Execution: 30%</li>
+                  </ul>
                 </div>
 
-                <!-- 3rd Place Card -->
-                <div class="bg-gray-500 text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">3rd Place</h3>
-                  <p class="text-2xl font-bold">$100</p>
+                <!-- Register Now Button -->
+                <div class="text-center">
+                  <a
+                    href="#register"
+                    class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
+                    >Register Now</a
+                  >
                 </div>
               </div>
 
-              <!-- About Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
-                <p class="text-gray-700">
-                  Join us in our annual Logo Design Contest, where creativity
-                  meets innovation. Showcase your design skills and stand a
-                  chance to win exciting prizes while gaining recognition in the
-                  design community.
-                </p>
-              </div>
-
-              <!-- Rules & Conditions Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Rules & Conditions</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>All entries must be original designs.</li>
-                  <li>Submissions should be in .png or .jpeg format.</li>
-                  <li>Each participant can submit up to 3 designs.</li>
-                  <li>
-                    Entries must be submitted by the deadline: November 30,
-                    2024.
-                  </li>
-                  <li>Judges' decisions are final.</li>
-                </ul>
-              </div>
-
-              <!-- Mark Distribution Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>Creativity: 40%</li>
-                  <li>Relevance to Theme: 30%</li>
-                  <li>Technical Execution: 30%</li>
-                </ul>
-              </div>
-
-              <!-- Register Now Button -->
-              <div class="text-center">
-                <a
-                  href="#register"
-                  class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
-                  >Register Now</a
-                >
-              </div>
-            </div>
-
-            <!-- banner contest  -->
-            <div id="prizes" class="tab-content px-5 lg:px-20 py-10">
-              <h1 class="text-3xl font-bold mb-6">Banner Design Contest</h1>
-
-              <!-- Prize Cards -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <!-- 1st Place Card -->
-                <div class="bg-[#CE1446] text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">1st Place</h3>
-                  <p class="text-2xl font-bold">$500</p>
+              <!-- schedule  -->
+              <div id="schedule" class="tab-content px-5 lg:px-20 py-10">
+                <h1 class="text-3xl font-bold mb-6">Contest</h1>
+                <!-- About Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
+                  <p class="text-gray-700">
+                    Join us in our annual Logo Design Contest, where creativity
+                    meets innovation. Showcase your design skills and stand a
+                    chance to win exciting prizes while gaining recognition in
+                    the design community.
+                  </p>
                 </div>
 
-                <!-- 2nd Place Card -->
-                <div class="bg-[#FFC107] text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">2nd Place</h3>
-                  <p class="text-2xl font-bold">$300</p>
+                <!-- Rules & Conditions Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">
+                    Rules & Conditions
+                  </h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>All entries must be original designs.</li>
+                    <li>Submissions should be in .png or .jpeg format.</li>
+                    <li>Each participant can submit up to 3 designs.</li>
+                    <li>
+                      Entries must be submitted by the deadline: November 30,
+                      2024.
+                    </li>
+                    <li>Judges' decisions are final.</li>
+                  </ul>
                 </div>
 
-                <!-- 3rd Place Card -->
-                <div class="bg-gray-500 text-white rounded-lg p-4 shadow-lg">
-                  <h3 class="text-xl font-semibold">3rd Place</h3>
-                  <p class="text-2xl font-bold">$100</p>
+                <!-- Mark Distribution Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>Creativity: 40%</li>
+                    <li>Relevance to Theme: 30%</li>
+                    <li>Technical Execution: 30%</li>
+                  </ul>
+                </div>
+
+                <!-- Register Now Button -->
+                <div class="text-center">
+                  <a
+                    href="#register"
+                    class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
+                    >Register Now</a
+                  >
                 </div>
               </div>
 
-              <!-- About Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
-                <p class="text-gray-700">
-                  Join us in our annual Logo Design Contest, where creativity
-                  meets innovation. Showcase your design skills and stand a
-                  chance to win exciting prizes while gaining recognition in the
-                  design community.
-                </p>
+              <!-- Quiz contest  -->
+              <div id="venue" class="tab-content px-5 lg:px-20 py-10">
+                <h1 class="text-3xl font-bold mb-6">Quiz Contest</h1>
+
+                <!-- Prize Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <!-- 1st Place Card -->
+                  <div class="bg-[#CE1446] text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">1st Place</h3>
+                    <p class="text-2xl font-bold">$500</p>
+                  </div>
+
+                  <!-- 2nd Place Card -->
+                  <div class="bg-[#FFC107] text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">2nd Place</h3>
+                    <p class="text-2xl font-bold">$300</p>
+                  </div>
+
+                  <!-- 3rd Place Card -->
+                  <div class="bg-gray-500 text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">3rd Place</h3>
+                    <p class="text-2xl font-bold">$100</p>
+                  </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
+                  <p class="text-gray-700">
+                    Join us in our annual Logo Design Contest, where creativity
+                    meets innovation. Showcase your design skills and stand a
+                    chance to win exciting prizes while gaining recognition in
+                    the design community.
+                  </p>
+                </div>
+
+                <!-- Rules & Conditions Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">
+                    Rules & Conditions
+                  </h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>All entries must be original designs.</li>
+                    <li>Submissions should be in .png or .jpeg format.</li>
+                    <li>Each participant can submit up to 3 designs.</li>
+                    <li>
+                      Entries must be submitted by the deadline: November 30,
+                      2024.
+                    </li>
+                    <li>Judges' decisions are final.</li>
+                  </ul>
+                </div>
+
+                <!-- Mark Distribution Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>Creativity: 40%</li>
+                    <li>Relevance to Theme: 30%</li>
+                    <li>Technical Execution: 30%</li>
+                  </ul>
+                </div>
+
+                <!-- Register Now Button -->
+                <div class="text-center">
+                  <a
+                    href="#register"
+                    class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
+                    >Register Now</a
+                  >
+                </div>
               </div>
 
-              <!-- Rules & Conditions Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Rules & Conditions</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>All entries must be original designs.</li>
-                  <li>Submissions should be in .png or .jpeg format.</li>
-                  <li>Each participant can submit up to 3 designs.</li>
-                  <li>
-                    Entries must be submitted by the deadline: November 30,
-                    2024.
-                  </li>
-                  <li>Judges' decisions are final.</li>
-                </ul>
-              </div>
+              <!-- banner contest  -->
+              <div id="prizes" class="tab-content px-5 lg:px-20 py-10">
+                <h1 class="text-3xl font-bold mb-6">Banner Design Contest</h1>
 
-              <!-- Mark Distribution Section -->
-              <div class="mb-6">
-                <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
-                <ul class="list-disc pl-5 text-gray-700">
-                  <li>Creativity: 40%</li>
-                  <li>Relevance to Theme: 30%</li>
-                  <li>Technical Execution: 30%</li>
-                </ul>
-              </div>
+                <!-- Prize Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <!-- 1st Place Card -->
+                  <div class="bg-[#CE1446] text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">1st Place</h3>
+                    <p class="text-2xl font-bold">$500</p>
+                  </div>
 
-              <!-- Register Now Button -->
-              <div class="text-center">
-                <a
-                  href="#register"
-                  class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
-                  >Register Now</a
-                >
+                  <!-- 2nd Place Card -->
+                  <div class="bg-[#FFC107] text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">2nd Place</h3>
+                    <p class="text-2xl font-bold">$300</p>
+                  </div>
+
+                  <!-- 3rd Place Card -->
+                  <div class="bg-gray-500 text-white rounded-lg p-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">3rd Place</h3>
+                    <p class="text-2xl font-bold">$100</p>
+                  </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">About the Contest</h2>
+                  <p class="text-gray-700">
+                    Join us in our annual Logo Design Contest, where creativity
+                    meets innovation. Showcase your design skills and stand a
+                    chance to win exciting prizes while gaining recognition in
+                    the design community.
+                  </p>
+                </div>
+
+                <!-- Rules & Conditions Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">
+                    Rules & Conditions
+                  </h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>All entries must be original designs.</li>
+                    <li>Submissions should be in .png or .jpeg format.</li>
+                    <li>Each participant can submit up to 3 designs.</li>
+                    <li>
+                      Entries must be submitted by the deadline: November 30,
+                      2024.
+                    </li>
+                    <li>Judges' decisions are final.</li>
+                  </ul>
+                </div>
+
+                <!-- Mark Distribution Section -->
+                <div class="mb-6">
+                  <h2 class="text-2xl font-semibold mb-2">Mark Distribution</h2>
+                  <ul class="list-disc pl-5 text-gray-700">
+                    <li>Creativity: 40%</li>
+                    <li>Relevance to Theme: 30%</li>
+                    <li>Technical Execution: 30%</li>
+                  </ul>
+                </div>
+
+                <!-- Register Now Button -->
+                <div class="text-center">
+                  <a
+                    href="#register"
+                    class="bg-[#CE1446] text-white font-semibold py-2 px-4 rounded hover:bg-[#a01236] transition duration-300"
+                    >Register Now</a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -406,9 +424,7 @@
     <footer class="bg-gradient-to-r from-[#290E2D] to-[#0A123C]">
       <!--brand logo  -->
       <div class="max-w-screen-xl mx-auto py-10 flex justify-center">
-        <a href="index.html"
-          ><img class="w-36" src="assets/image/logo1.png" alt="logo"
-        /></a>
+        <a href="index.html"><img class="w-36" src="assets/image/logo1.png" alt="logo"></a>
       </div>
       <!-- Quick Link container  -->
       <div class="max-w-screen-xl mx-auto md:flex justify-between">
@@ -425,39 +441,25 @@
           <div>
             <ul class="flex flex-col leading-7 text-center lg:text-start">
               <li class="mb-1">
-                <a class="font- hover:underline text-slate-200" href=""
-                  >Our Team</a
-                >
+                <a class="font- hover:underline text-slate-200" href="about.html">Our Team</a>
               </li>
               <li class="mb-1">
-                <a class="font- hover:underline text-slate-200" href=""
-                  >Join Us</a
-                >
+                <a class="font- hover:underline text-slate-200" href="#">Join Us</a>
               </li>
               <li class="mb-1">
-                <a class="font- hover:underline text-slate-200" href=""
-                  >Advisor Panel</a
-                >
+                <a class="font- hover:underline text-slate-200" href="#">Advisor Panel</a>
               </li>
               <li class="mb-1">
-                <a class="font- hover:underline text-slate-200" href=""
-                  >Lottery Winner</a
-                >
+                <a class="font- hover:underline text-slate-200" href="#">Lottery Winner</a>
               </li>
               <li class="mb-1">
-                <a class="font- hover:underline text-slate-200" href=""
-                  >Policy</a
-                >
+                <a class="font- hover:underline text-slate-200" href="#">Policy</a>
               </li>
               <li class="mb-1">
-                <a class="font- hover:underline text-slate-200" href=""
-                  >Privacy</a
-                >
+                <a class="font- hover:underline text-slate-200" href="#">Privacy</a>
               </li>
               <li class="mb-1">
-                <a class="font- hover:underline text-slate-200" href=""
-                  >FAQ's</a
-                >
+                <a class="font- hover:underline text-slate-200" href="#">FAQ's</a>
               </li>
             </ul>
           </div>
@@ -472,20 +474,20 @@
             <h3 class="text-[#CE1446] text-md lg:text-xl font-bold mb-2">
               Don't miss our feature update
             </h3>
-            <div class="flex mt-3">
-              <input
-                class="px-3 w-40 lg:w-72 py-2 rounded-s-md"
-                placeholder="Enter Your Email"
-                type="email"
-                name=""
-                id=""
-              />
-              <button
-                class="font-semibold text-white py-2 px-5 rounded-e-md bg-gradient-to-r from-[#7111EB] to-[#CE1446]"
-              >
-                SUBSCRIBE
-              </button>
-            </div>
+            <form action="mailto:info@empowernextgenbd.com" method="post" enctype="text/plain">
+              <div class="flex mt-3">
+                <input
+                  class="px-3 w-40 lg:w-72 py-2 rounded-s-md text-black"
+                  placeholder="Enter Your Email"
+                  type="email"
+                  name="email"
+                  required
+                />
+                <button type="submit" class="font-semibold text-white py-2 px-5 rounded-e-md bg-gradient-to-r from-[#7111EB] to-[#CE1446]">
+                  SUBSCRIBE
+                </button>
+              </div>
+            </form>
           </div>
         </div>
 
@@ -497,16 +499,16 @@
               <div class="flex items-center gap-2 mb-3">
                 <i class="fa-solid fa-phone text-2xl"></i>
                 <div class="">
-                  <p><a href="tel:+8801788956132">+880 1788956132</a></p>
-                  <p><a href="tel:+8801788956132">+880 1788956132</a></p>
+                  <p><a href="tel:+8801568219379">+880 1568219379</a></p>
+                  <p><a href="tel:+8801777973799">+880 1777973799</a></p>
                 </div>
               </div>
               <div class="flex items-center gap-2 mb-3">
                 <i class="fa-solid fa-envelope text-2xl"></i>
                 <div class="">
-                  <p><a href="mailto:info@example.com">info@example.com</a></p>
+                  <p><a href="mailto:info@example.com">info@empowernextgenbd.com</a></p>
                   <p>
-                    <a href="mailto:support@example.com">support@example.com</a>
+                    <a href="mailto:support@example.com">support@empowernextgenbd.com</a>
                   </p>
                 </div>
               </div>
@@ -524,14 +526,15 @@
       <div
         class="max-w-screen-xl mx-auto flex justify-between md:px-5 md:py-10 py-5"
       >
-        <div class="w-1/2 text-white">Copyright 2024, Empower NextGen</div>
+        <div class="w-1/2 text-white">Copyright &copy; 2024 Empower NextGen Ldt. All Rights Reserved.</div>
         <div class="w-1/2 flex justify-end">
           <div class="flex gap-3 lg:gap-5 mt-2 lg:mt-0 text-slate-200">
-            <i class="fa-brands fa-facebook-f text-xl"></i>
-            <i class="fa-brands fa-instagram text-xl"></i>
-            <i class="fa-brands fa-linkedin-in text-xl"></i>
-            <i class="fa-brands fa-twitter text-xl"></i>
-            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <a href="https://www.facebook.com/EmpowerNextGenLtd" target="_blank"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram text-xl"></i></a>
+            <a href="https://www.linkedin.com/company/empower-nextgen-ltd/" target="_blank"><i class="fa-brands fa-linkedin-in text-xl"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter text-xl"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            <a href="https://www.youtube.com/@EmpowerNextGenLtd" target="_blank"><i class="fa-brands fa-youtube text-xl"></i></a>
           </div>
         </div>
       </div>
